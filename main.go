@@ -17,7 +17,7 @@ func main() {
 
 	mux := goji.NewMux()
 	mux.HandleFunc(pat.Get("/hello/:name"), hello)
-	err := http.ListenAndServe("localhost:3000", mux)
+	err := http.ListenAndServe(":3000", mux)
 	if err != nil {
 		panic(err)
 	}
